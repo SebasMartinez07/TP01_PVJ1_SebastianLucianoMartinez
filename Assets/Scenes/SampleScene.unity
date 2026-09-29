@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 305113917}
   - component: {fileID: 305113916}
   - component: {fileID: 305113915}
+  - component: {fileID: 305113920}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -625,7 +626,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &305113916
 BoxCollider:
@@ -713,6 +714,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305113920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305113914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4854553e95d75bb4f81efd605ef5a1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &522868766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,11 +2463,11 @@ SceneRoots:
   - {fileID: 641008523}
   - {fileID: 136818079}
   - {fileID: 2055573194}
+  - {fileID: 992596597}
   - {fileID: 1745219893}
   - {fileID: 1136438355}
   - {fileID: 680265174}
   - {fileID: 256919210}
-  - {fileID: 992596597}
   - {fileID: 1535365960}
-  - {fileID: 1317032705}
   - {fileID: 977917478}
+  - {fileID: 1317032705}
