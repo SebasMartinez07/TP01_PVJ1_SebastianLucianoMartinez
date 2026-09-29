@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 19601952}
   - component: {fileID: 19601951}
   - component: {fileID: 19601950}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallPlatform04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136818079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallPlatforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 218642838}
   - component: {fileID: 218642837}
   - component: {fileID: 218642836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallPlatform01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 253692639}
   - component: {fileID: 253692638}
   - component: {fileID: 253692637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallPlatform03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 256919209}
   - component: {fileID: 256919208}
   - component: {fileID: 256919207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Column
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.88, z: -13.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 358666614}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &305113920
@@ -726,7 +727,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4854553e95d75bb4f81efd605ef5a1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  speedX: 5
+  speedZ: 5
+  jump: 5
+  CheckFloor: {fileID: 358666614}
+  Floor:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!1 &358666613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358666614}
+  m_Layer: 3
+  m_Name: CheckFloor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358666614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358666613}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.523, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 305113919}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522868766
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +777,7 @@ GameObject:
   - component: {fileID: 522868769}
   - component: {fileID: 522868768}
   - component: {fileID: 522868767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallPlatform02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +883,7 @@ GameObject:
   - component: {fileID: 583551209}
   - component: {fileID: 583551208}
   - component: {fileID: 583551207}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MiniPlatform01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +1012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641008523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MiniPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1050,7 @@ GameObject:
   - component: {fileID: 663707830}
   - component: {fileID: 663707829}
   - component: {fileID: 663707828}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MiniPlatform02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1141,7 +1179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 680265174}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GeneratorPlatform03
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1270,7 +1308,7 @@ GameObject:
   - component: {fileID: 898439552}
   - component: {fileID: 898439551}
   - component: {fileID: 898439550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MiniPlatform03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 977917478}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,7 +1565,7 @@ GameObject:
   - component: {fileID: 983892669}
   - component: {fileID: 983892668}
   - component: {fileID: 983892667}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallPlatform05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1734,7 +1772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1136438355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GeneratorPlatform02
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1874,7 +1912,7 @@ GameObject:
   - component: {fileID: 1318920540}
   - component: {fileID: 1318920539}
   - component: {fileID: 1318920538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1976,7 +2014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535365960}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2012,7 +2050,7 @@ GameObject:
   - component: {fileID: 1679419650}
   - component: {fileID: 1679419649}
   - component: {fileID: 1679419648}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2155,7 @@ GameObject:
   - component: {fileID: 1739842085}
   - component: {fileID: 1739842084}
   - component: {fileID: 1739842083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,7 +2257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1745219893}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GeneratorPlatform01
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -2253,7 +2291,7 @@ GameObject:
   - component: {fileID: 1929756196}
   - component: {fileID: 1929756195}
   - component: {fileID: 1929756194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
