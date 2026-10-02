@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private GameObject EnemyBallMove;
     void Start()
     {
-        InvokeRepeating("ShootBall", 0f, 2f);
+        InvokeRepeating("ShootBall", 0f, 3.5f);
     }
 
     void Update()
