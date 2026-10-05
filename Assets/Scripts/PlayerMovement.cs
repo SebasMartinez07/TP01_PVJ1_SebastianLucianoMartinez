@@ -31,4 +31,25 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(Vector3.up * jump, ForceMode.Impulse);
         }
     }
+
+    public void ActivarTurbo()
+    {
+        StartCoroutine(TurboTemporal());
+    }
+
+    private IEnumerator TurboTemporal()
+    {
+        speedX *= 2f;
+        speedZ *= 2f;
+        yield return new WaitForSeconds(10f);
+        speedX /= 2;
+        speedZ /= 2;
+
+        /*
+        ActivarTurbo();
+        yield return new WaitForSeconds(5f);
+        speedX /= 2;
+        speedZ /= 2;
+        */
+    }
 }
