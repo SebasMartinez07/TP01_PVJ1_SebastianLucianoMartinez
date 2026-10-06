@@ -1,0 +1,123 @@
+# TP01\_PVJ1 - Entorno Interactivo 3D
+
+### Programación de Videojuegos 1 - TUDIVJ 2025
+
+**Alumno:** Sebastián Luciano Martínez  
+**Repositorio:** https://github.com/SebasMartinez07/TP01\_PVJ1\_SebastianLucianoMartinez  
+**Versión de Unity:** 2022.3.62f3 LTS (Built-in Render Pipeline)
+
+\---
+
+## Descripción del juego
+
+Prototipo 3D en tercera persona donde el jugador debe atravesar un escenario con plataformas móviles, recoger un objeto clave y depositarlo en la GoalZone para ganar.
+
+El nivel cuenta con una zona de inicio, un sector de plataformas móviles sincronizadas sobre una pared, un objeto transportable y una zona de meta con feedback visual de victoria.
+
+El objetivo es validar el uso de temporizadores (`Invoke`, `InvokeRepeating`, `CancelInvoke`), movimiento de plataformas, `SetParent` para transporte, cambio de `Tag` para power-ups, detección por `Trigger` y patrullaje de enemigos.
+
+\---
+
+## Controles
+
+|Acción|Tecla|
+|-|-|
+|Moverse adelante/atrás/izquierda/derecha|`W A S D` / Flechas|
+|Saltar|`Espacio`|
+|Recoger objeto|`E` (cuando estás en rango)|
+|Soltar objeto / Depositar en GoalZone|`Q` (fuera de la zona lo suelta al piso, dentro de la zona lo entrega)|
+
+Cámara sigue al player. Mouse para mirar alrededor si usás el script de cámara libre.
+
+\---
+
+## Mecánicas implementadas (Consignas)
+
+### Consigna 1 - Escenario y Preparación
+
+* Escenario modular con colliders y Rigidbody.
+* Player con `CapsuleCollider` + `Rigidbody` (Freeze Rotation X,Z).
+* Organización de carpetas: `Scripts`, `Materials`, `Textures`, `Prefabs`.
+
+### Consigna 2 - Acciones Temporizadas
+
+* Uso de `Invoke`, `InvokeRepeating` y `CancelInvoke` para aparición de plataformas / power-ups / reseteo de efectos.
+
+### Consigna 3 - Plataforma Móvil
+
+* Script `WallPlatformsMovement.cs` - movimiento en eje Z con `Mathf.PingPong(Time.time \* speed, distancia)` para mantener sincronización perfecta y evitar el bug de estancamiento por `speed \*= -1`.
+* Límites configurables `limiteMin` y `limiteMax` en el Inspector.
+
+### Consigna 4 - Recolección con SetParent
+
+* `PickItem.cs`: `OnTriggerEnter` detecta `Item`, `E` hace `SetParent(hand)`, pone `isKinematic = true` y desactiva collider.
+* `Q` restaura independencia jerárquica `SetParent(null)`, reactiva collider y `isKinematic = false` con un pequeño impulso.
+* Si se presiona `Q` dentro de la GoalZone, llama a `DeliverItem()` en lugar de soltar.
+
+### Consigna 5 - Power-up con cambio de Tag
+
+* Al recoger power-up se cambia `gameObject.tag = "PoweredPlayer"` y se modifica velocidad.
+* Al finalizar el efecto con `Invoke` se restaura el Tag a `Player`.
+
+### Consigna 6 - Efectos por Trigger
+
+* `GoalZone.cs` con `BoxCollider IsTrigger = true`.
+* Detecta la orden manual `Q` dentro del radio, no automática al entrar.
+
+### Consigna 7 - Enemigo Patrullero
+
+* Patrullaje entre puntos con `NavMeshAgent` o `Translate`.
+* Detección del Player por `OnTriggerEnter`.
+
+## Cómo abrir y ejecutar el proyecto
+
+1. **Clonar el repositorio**
+
+```bash
+   git clone https://github.com/SebasMartinez07/TP01\_PVJ1\_SebastianLucianoMartinez.git
+   ```
+
+2. **Abrir en Unity Hub**
+
+   * Unity Hub > Open > Seleccionar la carpeta clonada.
+   * Asegúrate de tener instalada **Unity 2022.3.62f3 LTS** (Built-in).
+   * Al abrir por primera vez Unity importará los paquetes.
+3. **Abrir la escena principal**
+
+   * `Assets/Scenes/SampleScene.unity`
+4. **Ejecutar**
+
+   * Presioná `Play` en el editor.
+
+
+
+## Capturas del juego
+
+> Reemplazá los links de abajo por tus propias imágenes. Creá una carpeta `Screenshots/` en la raíz del repo.
+
+### Vista general del escenario
+
+[Escenario general](Screenshots/01_escenario_general.png)
+
+### Plataformas móviles sincronizadas en Z
+
+[Plataformas](Screenshots/02_plataformas_moviles.png)
+
+### Recogiendo el objeto con E
+
+[Pick](Screenshots/03_pick_item.png)
+
+### Depositando en GoalZone con Q + feedback de victoria
+
+[GoalZone](Screenshots/04_goalzone_victoria.png)
+
+### Inspector de PickItem y GoalZone configurado
+
+[Inspector](Screenshots/05_inspector.png)
+
+\---
+
+## Licencia de assets
+
+Texturas CC0 de ambientCG.com y Poly Haven. Modelos primitivos de Unity.
+
