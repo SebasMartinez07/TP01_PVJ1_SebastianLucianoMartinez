@@ -9,13 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jump = 6f;
     public Transform CheckFloor;
     public LayerMask Floor;
-
     private bool isFloored;
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
         //Movimiento WASD del Player
@@ -44,12 +39,5 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(10f);
         speedX /= 2;
         speedZ /= 2;
-
-        /*
-        ActivarTurbo();
-        yield return new WaitForSeconds(5f);
-        speedX /= 2;
-        speedZ /= 2;
-        */
     }
 }
