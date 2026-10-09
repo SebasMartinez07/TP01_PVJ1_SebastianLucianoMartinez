@@ -1,13 +1,13 @@
 # Parkour 3D: \[TP01\_PVJ1_SebastianLucianoMartinez / Juego]
 
-**Asignatura:** Programación de Videojuegos I 
-**Carrera:** Tecnicatura Universitaria en Diseño Integral de Videojuegos (TUDIVJ) UNJu 
-**Trabajo Práctico N° 1:** Entorno Interactivo 3D, Temporizadores y Git/GitHub 
-**Estudiante:** Sebastian Luciano Martinez
-**LU:** TUV000621
-**Repositorio:** https://github.com/SebasMartinez07/TP01\_PVJ1\_SebastianLucianoMartinez  
-**Versión de Unity:** 2022.3.62f3 LTS (Built-in Render Pipeline)
-**Equipo Docente:** Mg. Ing. Ariel Alejandro Vega | Tecn. Kevin Alexis Roman Llampa 
+**Asignatura:** Programación de Videojuegos I <br>
+**Carrera:** Tecnicatura Universitaria en Diseño Integral de Videojuegos (TUDIVJ) UNJu <br>
+**Trabajo Práctico N° 1:** Entorno Interactivo 3D, Temporizadores y Git/GitHub <br>
+**Estudiante:** Sebastián Luciano Martínez <br>
+**LU:** TUV000621 <br>
+**Repositorio:** https://github.com/SebasMartinez07/TP01_PVJ1_SebastianLucianoMartinez <br> 
+**Versión de Unity:** 2022.3.62f3 LTS (Built-in Render Pipeline) <br>
+**Equipo Docente:** Mg. Ing. Ariel Alejandro Vega | Tecn. Kevin Alexis Roman Llampa <br>
 
 ## Descripción del juego
 
@@ -100,7 +100,8 @@ El objetivo es validar el uso de temporizadores (`Invoke`, `InvokeRepeating`, `C
 
 ### Depositando en GoalZone con Q + feedback de victoria
 
-[GoalZone](Screenshots/goalzone_victoria.png)
+[GoalZone](Screenshots/goalzone.png)
+[Victoria](Screenshots/goalzone_victoria.png)
 
 
 ## Licencia de Assets

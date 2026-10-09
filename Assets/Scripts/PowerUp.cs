@@ -7,7 +7,7 @@ public class PowerUp : MonoBehaviour
 {
     private MeshRenderer meshRenderer;
     private Collider powerUpCollider;
-    [SerializeField] private float rotacionX = 30f;
+    [SerializeField] private float rotacionX = 0f;
     [SerializeField] private float rotacionY = 50f;
 
     void Start()
@@ -39,7 +39,7 @@ public class PowerUp : MonoBehaviour
         meshRenderer.enabled = false;
         powerUpCollider.enabled = false;
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
 
         meshRenderer.enabled = true;
         powerUpCollider.enabled = true;

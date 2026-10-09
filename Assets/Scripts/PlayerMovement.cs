@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speedX *= 2f;
         speedZ *= 2f;
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
         speedX /= 2;
         speedZ /= 2;
     }
